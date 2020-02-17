@@ -1,20 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Form from './Form.js'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          Insert header
+          Currency converter
         </p>
       </header>
-      <body>
-        <p>
-          Insert body
-        </p>
-      </body>
+        <div>
+          <Form/>
+        </div>
     </div>
   );
 }

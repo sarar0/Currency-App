@@ -13,7 +13,9 @@ class Form extends React.Component {
     }
   
     handleChange(event) {
-      this.setState({value: event.target.valueFrom});
+      this.setState({
+        [event.target.name]: event.target.value
+      });
     }
   
     handleSubmit(event) {
@@ -26,10 +28,10 @@ class Form extends React.Component {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            From:
-            <input type="text" value={this.state.valueFrom} onChange={this.handleChange} />
-            To:
-            <input type="text" value={this.state.valueTo} onChange={this.handleChange} />
+            Converting from:
+            <input type="text" name="valueFrom" value={this.state.valueFrom} onChange={this.handleChange} />
+            to:
+            <input type="text" name="valueTo" value={this.state.valueTo} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
         </form>

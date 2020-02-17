@@ -1,4 +1,5 @@
 import React from 'react';
+import './Form.css'
 
 class Form extends React.Component {
     constructor(props) {
@@ -26,15 +27,19 @@ class Form extends React.Component {
   
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Converting from:
-            <input type="text" name="valueFrom" value={this.state.valueFrom} onChange={this.handleChange} />
-            to:
-            <input type="text" name="valueTo" value={this.state.valueTo} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+        <div className="inputForm">
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Converting from:
+              <input type="text" name="valueFrom" value={this.state.valueFrom} onChange={this.handleChange} />
+              <br />
+              to:
+              <input type="text" name="valueTo" value={this.state.valueTo} onChange={this.handleChange} />
+            </label>
+              <br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
       );
     }
   }

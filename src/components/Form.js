@@ -1,5 +1,6 @@
 import React from 'react';
 import './Form.css'
+import Result from './Result.js'
 
 class Form extends React.Component {
     constructor(props) {
@@ -45,6 +46,9 @@ class Form extends React.Component {
                 <br />
               <input type="submit" value="Submit" />
             </form>
+          </div>
+          <div>
+            <Result from="EUR" to="GBP" amount="5"/>
           </div>
         </div>
       );

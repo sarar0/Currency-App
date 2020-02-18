@@ -1,17 +1,17 @@
 import React from 'react';
 import Form from './Form.js'
+import Result from './Result.js'
 
 class Display extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          convertedAmount: ''
-        }
+            convertedAmount: ''
+          }
     }
 
     convertAmount(from, to, amount) {
-
-        
+   
     }
 
     render() {
@@ -23,7 +23,7 @@ class Display extends React.Component {
         return (
             <div>
                 <Form/>
-                {displayText}
+                <Result/>
             </div>
         )
     }

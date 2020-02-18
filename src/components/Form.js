@@ -46,10 +46,6 @@ class Form extends React.Component {
               <input type="submit" value="Submit" />
             </form>
           </div>
-          <div>
-          {/* <Display from={this.state.from} to={this.state.to} amount={this.state.amount}/> */}
-          {/* {displayText} */}
-          </div>
         </div>
       );
     }

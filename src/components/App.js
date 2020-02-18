@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Form from './Form.js'
+import Display from './Display.js'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         </p>
       </header>
         <div>
-          <Form/>
+          <Display/>
         </div>
     </div>
   );

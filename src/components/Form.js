@@ -7,8 +7,7 @@ class Form extends React.Component {
       this.state = {
         valueFrom: '',
         valueTo: '',
-        amount: '', 
-        convertedAmount: ''
+        amount: ''
       };
   
       this.handleChange = this.handleChange.bind(this);
@@ -29,10 +28,6 @@ class Form extends React.Component {
     }
   
     render() {
-      let displayText = ''
-      if (this.state.convertedAmount) {
-        displayText = <p>Converted amount = {this.state.convertedAmount} {this.state.valueTo}</p>
-      }
       return (
         <div>
           <div className="inputForm">
@@ -52,7 +47,8 @@ class Form extends React.Component {
             </form>
           </div>
           <div>
-          {displayText}
+          {/* <Display from={this.state.from} to={this.state.to} amount={this.state.amount}/> */}
+          {/* {displayText} */}
           </div>
         </div>
       );

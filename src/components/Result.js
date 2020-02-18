@@ -11,9 +11,8 @@ class Result extends React.Component {
     render() {
         let displayText = '';
         if (this.state.convertedAmount) {
-          displayText = <p>Converted amount = {this.state.convertedAmount} {this.props.to}</p>
+          displayText = <p>Converted amount = {this.props.elements.amount * 4} {this.props.elements.to}</p>
         }
-    
         return (
             <div>
                 {displayText}

@@ -8,9 +8,9 @@ class Form extends React.Component {
       this.state = {
         valueFrom: '',
         valueTo: '',
-        amount: ''
+        amount: '',
+        elements: ''
       };
-  
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -24,7 +24,10 @@ class Form extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
       this.setState({
-        convertedAmount: this.state.amount * 4
+        elements: {
+          amount: this.state.amount,
+          to: this.state.valueTo
+        }
       })
     }
   
@@ -48,7 +51,7 @@ class Form extends React.Component {
             </form>
           </div>
           <div>
-            <Result from="EUR" to="GBP" amount="5"/>
+            <Result elements={this.state.elements}/>
           </div>
         </div>
       );

@@ -6,12 +6,7 @@ class Display extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            convertedAmount: "hello"
           }
-    }
-
-    convertAmount(from, to, amount) {
-   
     }
 
     render() {

@@ -30,11 +30,11 @@ class Form extends React.Component {
     render() {
       let displayText = '';
       if (this.state.convertedAmount) {
-        displayText = <p>Converted amount = {this.state.amount} {this.state.valueTo}</p>
+        displayText = <p>Converted amount = {this.state.convertedAmount} {this.state.valueTo}</p>
       }
       return (
         <div>
-          <div className="inputForm">
+          <div className="Input-form">
             <form onSubmit={this.handleSubmit}>
               <label>
                 Enter amount:
@@ -50,7 +50,7 @@ class Form extends React.Component {
               <input type="submit" value="Submit" />
             </form>
           </div>
-          <div>
+          <div className="Result">
             {displayText}
           </div>
         </div>

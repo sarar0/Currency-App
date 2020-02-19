@@ -1,6 +1,5 @@
 import React from 'react';
 import './Form.css'
-import Result from './Result.js'
 
 class Form extends React.Component {
     constructor(props) {
@@ -9,7 +8,7 @@ class Form extends React.Component {
         valueFrom: '',
         valueTo: '',
         amount: '',
-        elements: ''
+        convertedAmount: ''
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,14 +23,15 @@ class Form extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
       this.setState({
-        elements: {
-          amount: this.state.amount,
-          to: this.state.valueTo
-        }
+          convertedAmount: this.state.amount * 4
       })
     }
-  
+
     render() {
+      let displayText = '';
+      if (this.state.convertedAmount) {
+        displayText = <p>Converted amount = {this.state.amount} {this.state.valueTo}</p>
+      }
       return (
         <div>
           <div className="inputForm">
@@ -51,7 +51,7 @@ class Form extends React.Component {
             </form>
           </div>
           <div>
-            <Result elements={this.state.elements}/>
+            {displayText}
           </div>
         </div>
       );

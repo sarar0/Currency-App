@@ -9,5 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 app.get('/express_backend', (req, res) => {
-  res.send({ express: 'DATA FROM API' });
+  res.send({ express: {
+      "EUR": 1.20
+     }
+     });
 });

@@ -1,1 +1,1 @@
-# Currencies
+# Currency converter app

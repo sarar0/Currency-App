@@ -1,4 +1,5 @@
 import React from 'react';
+import Result from './Result.js'
 import './Form.css'
 
 class Form extends React.Component {
@@ -22,17 +23,10 @@ class Form extends React.Component {
   
     handleSubmit(event) {
       event.preventDefault();
-        let multiplier = 4
-      this.setState({
-          convertedAmount: this.state.amount * multiplier
-      })
+      // need to submit only on submit - not on change
     }
 
     render() {
-      let displayText = '';
-      if (this.state.convertedAmount) {
-        displayText = <p>Converted amount = {this.state.convertedAmount} {this.state.valueTo}</p>
-      }
       return (
         <div>
           <div className="Input-form">
@@ -51,8 +45,8 @@ class Form extends React.Component {
               <input type="submit" value="Submit" />
             </form>
           </div>
-          <div className="Result">
-            {displayText}
+          <div className="Result">     
+            <Result amount={this.state.amount} currencyFrom={this.state.valueFrom} currencyTo={this.state.valueTo}/>
           </div>
         </div>
       );

@@ -12,7 +12,7 @@ class Display extends React.Component {
 
     componentDidMount() {
       this.callBackendAPI()
-        .then(res => this.setState({ data: res.express.EUR }))
+        .then(res => this.setState({ data: res.results }))
         .catch(err => console.log(err));
     }
 
@@ -30,7 +30,6 @@ class Display extends React.Component {
         return (
             <div>
                 <Form/>
-                {this.state.data}
             </div>
         )
     }

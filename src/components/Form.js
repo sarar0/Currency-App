@@ -22,9 +22,9 @@ class Form extends React.Component {
   
     handleSubmit(event) {
       event.preventDefault();
-        let multiplier = 4;
+        let multiplier = 4
       this.setState({
-          convertedAmount: this.state.amount * multiplier;
+          convertedAmount: this.state.amount * multiplier
       })
     }
 

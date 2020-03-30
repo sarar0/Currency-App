@@ -9,6 +9,7 @@ class Form extends React.Component {
         valueFrom: '',
         valueTo: '',
         amount: '',
+        exchangeRate:'',
         convertedAmount: ''
       };
       this.handleChange = this.handleChange.bind(this);
@@ -28,6 +29,7 @@ class Form extends React.Component {
 
     apiCall() {
       const data = { from: this.state.valueFrom, to: this.state.valueTo };
+      // add right url then call function on submit
       return fetch("/express_backend", {
         method: "POST",
         headers: {
@@ -39,7 +41,7 @@ class Form extends React.Component {
         .then(data => data.json())
         .then(body => {
           this.setState({
-            options: body,
+            exchangeRate: body,
             loading: false
           });
           return body;

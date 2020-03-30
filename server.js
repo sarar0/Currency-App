@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 
-// app.get('/express_backend', (req, res) => {
-//   const conversion = Promise.resolve(Api.apiCall())
+// app.post('/express_backend', (req, res) => {
+//   const conversion = Promise.resolve(Api.apiCall(req.from, req.to))
 
 //   conversion.then((data)=>
 //     res.send({
@@ -21,10 +21,11 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 // })
 
 // Test routes
-app.get('/express_backend', (req, res) => {
+app.post('/express_backend', (req, res) => {
 
   res.send({ 
     "data": {
       "USD_PHP": 51.440375
-  }
+    }
+  })
 })

@@ -26,6 +26,26 @@ class Form extends React.Component {
       // need to submit only on submit - not on change
     }
 
+    apiCall() {
+      const data = { from: this.state.valueFrom, to: this.state.valueTo };
+      return fetch("/express_backend", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+        .then(data => data.json())
+        .then(body => {
+          this.setState({
+            options: body,
+            loading: false
+          });
+          return body;
+        });
+    }
+
     render() {
       return (
         <div>

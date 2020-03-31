@@ -10,9 +10,9 @@ class Display extends React.Component {
     }
 
     componentDidMount() {
-      this.callBackendAPI()
-        .then(res => this.setState({ data: res.results }))
-        .catch(err => console.log(err));
+      // this.callBackendAPI()
+      //   .then(res => this.setState({ data: res.results }))
+      //   .catch(err => console.log(err));
     }
 
     callBackendAPI = async () => {

@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
-const Api = require('./src/services/apiCalls');
+const Api = require('./services/apiCalls');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

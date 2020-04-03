@@ -9,15 +9,14 @@ class Result extends React.Component {
       }
     
     convert(amount, multiplier) {
-      // this.setState({
-      //     convertedAmount: amount * multiplier
-      // });
+      this.setState({
+          convertedAmount: amount * multiplier
+      });
     }
 
     render() {     
         // need to add conversion  
         // this.convert(this.props.amount, this.props.multiplier)
-        console.log(this.props)
         return (
           <div>
             <div>

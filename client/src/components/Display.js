@@ -4,9 +4,7 @@ import Form from './Form.js'
 class Display extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            data: null
-          }
+        this.state = {}
     }
 
     render() {

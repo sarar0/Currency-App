@@ -68,7 +68,7 @@ class Form extends React.Component {
             </form>
           </div>
           <div className="Result">     
-            <Result multiplier={this.state.exchangeRate.data} amount={this.state.amount} currencyFrom={this.state.valueFrom} currencyTo={this.state.valueTo}/>
+            <Result multiplier={this.state.exchangeRate.result} amount={this.state.amount} currencyFrom={this.state.valueFrom} currencyTo={this.state.valueTo}/>
           </div>
         </div>
       );

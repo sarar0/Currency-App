@@ -13,11 +13,13 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 app.post('/express_backend', (req, res) => {
   const conversion = Promise.resolve(Api.apiCall(req.body.from, req.body.to))
   
-  conversion.then((data)=>
+  conversion.then((data)=> {
+    var formatting = req.body.from + "_" + req.body.to
+    var exchange_rate = data[formatting]
     res.send({
-        data
+        exchange_rate
     })
-  )
+  })
 })
 
 // Test routes

@@ -4,23 +4,24 @@ class Result extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          convertedAmount: ''
+          convertedAmount: 0
         };
       }
     
-    convert() {
-      let multiplier = 4;
-      this.setState({
-          convertedAmount: this.props.amount * multiplier
-      });
+    convert(amount, multiplier) {
+      // this.setState({
+      //     convertedAmount: amount * multiplier
+      // });
     }
 
     render() {     
         // need to add conversion  
+        // this.convert(this.props.amount, this.props.multiplier)
+        console.log(this.props)
         return (
           <div>
             <div>
-              XX {this.props.currencyTo}
+             {this.state.convertedAmount} {this.props.currencyTo}
             </div>
           </div>
         );

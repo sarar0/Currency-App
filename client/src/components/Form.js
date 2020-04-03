@@ -15,17 +15,6 @@ class Form extends React.Component {
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
-  
-    handleChange(event) {
-      this.setState({
-        [event.target.name]: event.target.value
-      });
-    }
-  
-    handleSubmit(event) {
-      event.preventDefault();
-      // need to submit only on submit - not on change
-    }
 
     apiCall() {
       const data = { from: this.state.valueFrom, to: this.state.valueTo };
@@ -46,6 +35,17 @@ class Form extends React.Component {
           });
           return body;
         });
+    }
+  
+    handleChange(event) {
+      this.setState({
+        [event.target.name]: event.target.value
+      });
+    }
+  
+    handleSubmit(event) {
+      event.preventDefault();
+      this.apiCall()
     }
 
     render() {
@@ -68,7 +68,7 @@ class Form extends React.Component {
             </form>
           </div>
           <div className="Result">     
-            <Result amount={this.state.amount} currencyFrom={this.state.valueFrom} currencyTo={this.state.valueTo}/>
+            <Result multiplier={this.state.exchangeRate.data} amount={this.state.amount} currencyFrom={this.state.valueFrom} currencyTo={this.state.valueTo}/>
           </div>
         </div>
       );

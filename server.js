@@ -15,9 +15,9 @@ app.post('/express_backend', (req, res) => {
   
   conversion.then((data)=> {
     var formatting = req.body.from + "_" + req.body.to
-    var exchange_rate = data[formatting]
+    var result = data[formatting]
     res.send({
-        exchange_rate
+        result
     })
   })
 })

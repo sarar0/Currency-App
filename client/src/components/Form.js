@@ -34,9 +34,11 @@ class Form extends React.Component {
             loading: false
           });
           // return body;
+            console.log(this.state);
+
         });
     }
-  
+
     handleChange(event) {
       this.setState({
         [event.target.name]: event.target.value

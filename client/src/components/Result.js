@@ -14,8 +14,9 @@ class Result extends React.Component {
       });
     }
 
+    // need to call the convert method with the props
+
     render() {     
-        // this.convert(this.props.amount, this.props.multiplier)
         return (
           <div>
             <div>

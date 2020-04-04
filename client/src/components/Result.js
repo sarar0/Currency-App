@@ -15,23 +15,22 @@ class Result extends React.Component {
     };
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        // console.log(prevProps);
-        // console.log(this.props);
         if (this.props.multiplier !== prevProps.multiplier || (prevProps !== this.props)) {
             this.convert(this.props.amount, this.props.multiplier);
         }
     }
 
-    // need to call the convert method with the props
-
     render() {
-        // console.log(this.props)
+      var string = ''
+      if (this.props.multiplier !== '' ){
+        string = this.props.amount + " " + this.props.currencyFrom.toUpperCase() + " = " + this.state.convertedAmount.toFixed(4) + " " + this.props.currencyTo.toUpperCase()
+
+      }
+      
         return (
-            <div>
                 <div>
-                    {this.state.convertedAmount} {this.props.multiplier !== '' ? this.props.currencyTo : null}
+                    {string}
                 </div>
-            </div>
         );
     }
 }

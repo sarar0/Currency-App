@@ -15,7 +15,9 @@ class Result extends React.Component {
     };
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.multiplier !== prevProps.multiplier) {
+        // console.log(prevProps);
+        // console.log(this.props);
+        if (this.props.multiplier !== prevProps.multiplier || (prevProps !== this.props)) {
             this.convert(this.props.amount, this.props.multiplier);
         }
     }
@@ -27,7 +29,7 @@ class Result extends React.Component {
         return (
             <div>
                 <div>
-                    {this.state.convertedAmount} {this.props.currencyTo}
+                    {this.state.convertedAmount} {this.props.multiplier !== '' ? this.props.currencyTo : null}
                 </div>
             </div>
         );

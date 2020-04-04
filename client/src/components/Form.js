@@ -28,15 +28,14 @@ class Form extends React.Component {
         body: JSON.stringify(data)
       })
         .then(data => data.json())
-        .then(body => {
+        .then(body =>
           this.setState({
             exchangeRate: body.result,
             loading: false
-          });
+          })
           // return body;
-            console.log(this.state);
 
-        });
+        );
     }
 
     handleChange(event) {

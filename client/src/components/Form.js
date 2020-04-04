@@ -30,10 +30,10 @@ class Form extends React.Component {
         .then(data => data.json())
         .then(body => {
           this.setState({
-            exchangeRate: body,
+            exchangeRate: body.result,
             loading: false
           });
-          return body;
+          // return body;
         });
     }
   
@@ -68,7 +68,7 @@ class Form extends React.Component {
             </form>
           </div>
           <div className="Result">     
-            <Result multiplier={this.state.exchangeRate.result} amount={this.state.amount} currencyFrom={this.state.valueFrom} currencyTo={this.state.valueTo}/>
+            <Result multiplier={this.state.exchangeRate} amount={this.state.amount} currencyFrom={this.state.valueFrom} currencyTo={this.state.valueTo}/>
           </div>
         </div>
       );

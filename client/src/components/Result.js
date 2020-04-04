@@ -16,7 +16,8 @@ class Result extends React.Component {
 
     // need to call the convert method with the props
 
-    render() {     
+    render() {
+        console.log(this.props)    
         return (
           <div>
             <div>

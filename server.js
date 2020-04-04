@@ -15,7 +15,7 @@ app.post('/express_backend', (req, res) => {
   
   conversion.then((data)=> {
     var formatting = req.body.from + "_" + req.body.to
-    var result = data[formatting]
+    var result = data[formatting.toUpperCase()]
     res.send({
         result
     })
@@ -25,9 +25,9 @@ app.post('/express_backend', (req, res) => {
 // Test routes
 // app.post('/express_backend', (req, res) => {
 
-//   res.send({ 
-//     "data": {
-//       "USD_PHP": 51.440375
+//   res.send(
+//     {
+//       "result": 0.925498
 //     }
-//   })
+//   )
 // })

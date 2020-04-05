@@ -55,17 +55,16 @@ class Form extends React.Component {
           <div className="Input-form">
             <form onSubmit={this.handleSubmit}>
               <label>
-                Enter amount you wish to convert:
+                Amount:
                 <input type="number" name="amount" value={this.state.amount} onChange={this.handleChange} />
                 <br />
-                converting from:
+                From:
                 <input type="text" name="valueFrom" value={this.state.valueFrom} onChange={this.handleChange} maxLength={3} />
-                <br />
-                to:
+                To:
                 <input type="text" name="valueTo" value={this.state.valueTo} onChange={this.handleChange} maxLength={3} />
               </label>
                 <br />
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Convert"/>
             </form>
           </div>
           <div className="Result">     

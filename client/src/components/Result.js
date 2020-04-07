@@ -24,9 +24,7 @@ class Result extends React.Component {
       var string = ''
       if (this.props.multiplier !== '' ){
         string = this.props.amount + " " + this.props.currencyFrom.toUpperCase() + " = " + this.state.convertedAmount.toFixed(4) + " " + this.props.currencyTo.toUpperCase()
-
       }
-      
         return (
                 <div>
                     {string}

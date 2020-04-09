@@ -11,8 +11,8 @@ class Display extends React.Component {
     render() {
         return (
             <div>
-                <Codes/>
                 <Form/>
+                <Codes/>
             </div>
         )
     }

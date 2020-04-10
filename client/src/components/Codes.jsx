@@ -2,22 +2,34 @@ import React from 'react';
 
 class Codes extends React.Component {
 
-    getCodes(){
+    getTableData(){
         var cc = require('currency-codes/data');
-        var string = ''
-        for (var i in cc) {
-            string = string + cc[i].code + ":" + cc[i].currency + "\n"
-        }
-        console.log(string)
-        return string
+        return cc.map((item, index) => {
+            const { currency, code } = item
+            return (
+                <tr key={index}>
+                   <td>{currency}</td>
+                   <td>{code}</td>
+                </tr>
+             )
+        })
     }
 
     render() {
         return (
             <div>
                 List of currency codes
-                <br></br>
-                {this.getCodes()}
+                <table id='currencies'>
+                    <thead>
+                        <tr>
+                            <th>Currency</th>
+                            <th>Code</th> 
+                        </tr>    
+                    </thead>
+                    <tbody>
+                        {this.getTableData()}
+                    </tbody>
+                </table>
             </div>
         )
     }

@@ -8,3 +8,7 @@
     border: 1px solid black;
     margin: 2%
 }
+
+label, input, button {
+    display: block
+}

@@ -57,14 +57,13 @@ class Form extends React.Component {
               <label>
                 Amount:
                 <input type="number" name="amount" value={this.state.amount} onChange={this.handleChange} />
-                <br />
                 From:
                 <input type="text" name="valueFrom" value={this.state.valueFrom} onChange={this.handleChange} maxLength={3} />
                 To:
                 <input type="text" name="valueTo" value={this.state.valueTo} onChange={this.handleChange} maxLength={3} />
               </label>
                 <br />
-              <input type="submit" value="Convert"/>
+              <input class="btn btn-primary" type="submit" value="Convert"/>
             </form>
           </div>
           <div className="Result">     

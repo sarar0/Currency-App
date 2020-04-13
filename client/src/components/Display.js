@@ -10,7 +10,7 @@ class Display extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="display">
                 <Form/>
                 <Codes/>
             </div>

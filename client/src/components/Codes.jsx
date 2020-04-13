@@ -18,7 +18,6 @@ class Codes extends React.Component {
     render() {
         return (
             <div>
-                List of currency codes
                 <table id='currencies'>
                     <thead>
                         <tr>

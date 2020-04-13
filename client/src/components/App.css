@@ -16,9 +16,12 @@
   color: #61dafb;
 }
 
+#display {
+  margin: auto;
+}
+
 #currencies {
-  margin-left:auto; 
-  margin-right:auto;
+  margin: auto;
   align-self: center;
   text-align: center;
   border-collapse: collapse;
@@ -34,11 +37,6 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #4CAF50;
+  background-color: rgb(52, 118, 218);
   color: white;
-}
-
-table.center {
-  margin-left:auto; 
-  margin-right:auto;
 }

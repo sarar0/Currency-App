@@ -6,9 +6,15 @@
 .Result {
     border-radius: 15px;
     border: 1px solid black;
-    margin: 2%
+    margin: 2%;
+    font-size: 20px !important;
+    font-style: bold;
 }
 
 label, input, button {
     display: block
+}
+
+.Instructions {
+    font-style: italic;
 }

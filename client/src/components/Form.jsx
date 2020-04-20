@@ -1,5 +1,5 @@
 import React from 'react';
-import Result from './Result.js'
+import Result from './Result.jsx'
 import './Form.css'
 
 class Form extends React.Component {
@@ -18,7 +18,6 @@ class Form extends React.Component {
 
     apiCall() {
       const data = { from: this.state.valueFrom, to: this.state.valueTo };
-      // add right url then call function on submit
       return fetch("/express_backend", {
         method: "POST",
         headers: {
@@ -53,6 +52,9 @@ class Form extends React.Component {
       return (
         <div>
           <div className="Input-form">
+            <div className="Instructions">
+            Please use currency codes
+            </div>
             <form onSubmit={this.handleSubmit}>
               <label>
                 Amount:

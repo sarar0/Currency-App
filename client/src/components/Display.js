@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './Form.js'
+import Form from './Form.jsx'
 import Codes from './Codes.jsx'
 
 class Display extends React.Component {
